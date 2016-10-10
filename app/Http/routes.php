@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/test', function() {
 	return 'this is a test';
 });
+
+//pre-define route for authentication bone by laravel when use make:auth
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
