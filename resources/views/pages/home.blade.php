@@ -10,7 +10,7 @@
         <h1 class="text-center">Welecome to Thanh's movie world</h1>
 
         <!-- container for carousel section -->
-        <div class="container" width=75%>
+        <div class="container" width="75%">
 
             <!-- carousel  -->
             <div id="moive-carousel" class="carousel slide" data-ride="carousel">
@@ -68,6 +68,32 @@
 
         </div>
 
+        <div class="container" style="margin-top: 2em">
+
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#showing">Showing</a></li>
+                    <li><a data-toggle="tab" href="#comingSoon">Coming Soon</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="showing" class="tab-pane fade in active">
+                        <h3>Showing</h3>
+                        <p>Some content.</p>
+                    </div>
+                    <div id="comingSoon" class="tab-pane fade">
+                        <h3>Coming Soon</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+
+
+        </div>
 
     </div>
 
