@@ -68,29 +68,104 @@
 
         </div>
 
-        <div class="container" style="margin-top: 2em">
+        <div class="container">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#showing">Showing</a></li>
+                <li><a data-toggle="tab" href="#comingSoon">Coming Soon</a></li>
+            </ul>
 
 
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#showing">Showing</a></li>
-                    <li><a data-toggle="tab" href="#comingSoon">Coming Soon</a></li>
-                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                </ul>
+            <div class="tab-content">
 
-                <div class="tab-content">
-                    <div id="showing" class="tab-pane fade in active">
-                        <h3>Showing</h3>
-                        <p>Some content.</p>
+                <!-- Showing -->
+                <div id="showing" class="tab-pane fade in active">
+                    <h3>Showing Now</h3>
+                    <!-- movie 1 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/deepwater_horizon.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
                     </div>
-                    <div id="comingSoon" class="tab-pane fade">
-                        <h3>Coming Soon</h3>
-                        <p>Some content in menu 1.</p>
+                    <!-- movie 2 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/kevin_hart_what_now.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
                     </div>
-                    <div id="menu2" class="tab-pane fade">
-                        <h3>Menu 2</h3>
-                        <p>Some content in menu 2.</p>
+                    <!-- movie 3 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/max_steel.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
+                    </div>
+                    <!-- movie 4 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/passage_to_mars.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Coming Soon -->
+                <div id="comingSoon" class="tab-pane fade">
+                    <h3>Coming Soon</h3>
+                    <!-- movie 5 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/priceless.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
+                    </div>
+                    <!-- movie 6 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/spirit_of_the_game.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
+                    </div>
+                    <!-- movie 7 -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <img src="images/the_hollow.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        </div>
+                        <div class="row">
+                            </br>
+                            <p>Title:</p>
+                            <P>Description</P>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
         </div>
