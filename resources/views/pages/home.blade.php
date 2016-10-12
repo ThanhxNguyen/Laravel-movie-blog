@@ -68,14 +68,16 @@
 
         </div>
 
+        <!-- container for "movie categories" section -->
         <div class="container">
 
+            <!-- tab -->
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#showing">Showing</a></li>
                 <li><a data-toggle="tab" href="#comingSoon">Coming Soon</a></li>
             </ul>
 
-
+            <!-- tab contents -->
             <div class="tab-content">
 
                 <!-- Showing -->
@@ -166,7 +168,6 @@
                 </div>
 
             </div>
-
 
         </div>
 
