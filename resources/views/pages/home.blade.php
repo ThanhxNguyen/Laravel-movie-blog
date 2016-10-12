@@ -83,8 +83,8 @@
                     <h3>Showing Now</h3>
                     <!-- movie 1 -->
                     <div class="col-md-4">
-                        <div class="row">
-                            <img src="images/deepwater_horizon.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                        <div class="row" >
+                            <img src="images/deepwater_horizon.jpg" alt="1" class="img-responsive center-block"  width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -95,7 +95,7 @@
                     <!-- movie 2 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/kevin_hart_what_now.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/kevin_hart_what_now.jpg" alt="2" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -106,7 +106,7 @@
                     <!-- movie 3 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/max_steel.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/max_steel.jpg" alt="3" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -117,7 +117,7 @@
                     <!-- movie 4 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/passage_to_mars.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/passage_to_mars.jpg" alt="4" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -133,7 +133,7 @@
                     <!-- movie 5 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/priceless.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/priceless.jpg" alt="5" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -144,7 +144,7 @@
                     <!-- movie 6 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/spirit_of_the_game.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/spirit_of_the_game.jpg" alt="6" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
@@ -155,7 +155,7 @@
                     <!-- movie 7 -->
                     <div class="col-md-4">
                         <div class="row">
-                            <img src="images/the_hollow.jpg" alt="1" class="img-responsive" align="left" width="75%" height="50PX">
+                            <img src="images/the_hollow.jpg" alt="7" class="img-responsive center-block" width="75%">
                         </div>
                         <div class="row">
                             </br>
