@@ -17,4 +17,8 @@ class Movie extends Model
 	public function sessions() {
 		return $this->belongsToMany('App\Session');
 	}
+
+	public function orders() {
+		return $this->hasMany('App\Order');
+	}
 }

@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(CinemasTableSeeder::class);
 		$this->call(CinemasMoviesPivotTableSeeder::class);
 		$this->call(MoviesSessionsPivotTableSeeder::class);
+		$this->call(TicketTypesTableSeeder::class);
     }
 }

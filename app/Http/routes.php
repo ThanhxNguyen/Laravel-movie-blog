@@ -11,15 +11,44 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
+Route::group(['middleware' => ['web']], function() {
+	Route::get('/', function () {
+		return view('pages.home');
+	});
+
+	Route::get('/test', function() {
+		return 'this is a test';
+	});
+
+	//pre-define route for authentication bone by laravel when use make:auth
+	Route::auth();
+
+	//get single movie
+	Route::get('/movie/{movie}', 'MoviesController@index');
+	//show booking movie page
+	Route::get('/movie/{movie}/book', 'MoviesController@showBookingForm');
+	//show cart
+	Route::get('/cart', 'CartsController@displayCart');
+	//add to cart is clicked
+	Route::post('/cart', 'CartsController@addToCart');
+
+	//remove item from cart
+	Route::get('/cart/{index}/remove', 'CartsController@removeItemFromCart');
+	//update quantity
+	Route::post('/cart/{index}/update', 'CartsController@updateCart');
+
+	Route::get('/checkout', 'CartsController@displayCheckout');
+
+	Route::post('/checkout', 'CartsController@checkout');
+
+	Route::get('/receipt', 'CartsController@displayReceipt');
+
+	//user
+	Route::get('/account', '');
+
+	Route::get('destroy/session', function() {
+		session()->flush();
+	});
 });
 
-Route::get('/test', function() {
-	return 'this is a test';
-});
 
-//pre-define route for authentication bone by laravel when use make:auth
-Route::auth();
-
-Route::get('/home', 'HomeController@index');

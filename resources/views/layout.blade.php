@@ -7,8 +7,11 @@
     <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700'/>
     <link rel="stylesheet" href='//fonts.googleapis.com/icon?family=Material+Icons'/>
     <link rel="stylesheet" href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
+    <!--Material Design Bootstrap Theme-->
     <link rel="stylesheet" href='/css/bootstrap-material-design.min.css'/>
     <link rel="stylesheet" href='/css/ripples.min.css'/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href='/css/styles.css'/>
 
     @yield('header')
@@ -26,7 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><b>Assignment 2</b></a>
+            <a class="navbar-brand" href="{{url('/')}}"><b>Assignment 2</b></a>
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
@@ -63,11 +66,16 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{--{{ Auth::user()->name }} <span class="caret"></span>--}}
+                                    <i class="fa fa-user fa-lg" aria-hidden="true"></i><span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    <li><a href="" class="text-center"><b>{{ Auth::user()->name }}</b></a></li>
+                                    <li><a href="" class="text-center">My Account</a></li>
+                                    <li><a href="" class="text-center">Wish List</a></li>
+                                    <li><a href="" class="text-center">Settings</a></li>
+                                    <li><a href="{{ url('/logout') }}" class="text-center"><i class="fa fa-btn fa-sign-out"></i>&nbsp;Logout</a></li>
                                 </ul>
                             </li>
                         @endif
