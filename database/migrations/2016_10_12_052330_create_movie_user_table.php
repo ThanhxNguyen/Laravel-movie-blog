@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMovieSessionTable extends Migration
+class CreateMovieUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,11 @@ class CreateMovieSessionTable extends Migration
      */
     public function up()
     {
-        Schema::create('movie_session', function (Blueprint $table) {
+        Schema::create('movie-user', function (Blueprint $table) {
             $table->increments('id');
-			$table->integer('session_id')->unsigned();
+			$table->integer('user_id')->unsigned();
 			$table->integer('movie_id')->unsigned();
-			$table->foreign('session_id')->references('id')->on('sessions')->onDelete('cascade');
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 			$table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateMovieSessionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('movie_session');
+        Schema::drop('movie-user');
     }
 }

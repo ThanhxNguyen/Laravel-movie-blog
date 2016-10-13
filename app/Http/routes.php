@@ -24,7 +24,7 @@ Route::group(['middleware' => ['web']], function() {
 	Route::auth();
 
 	//get single movie
-	Route::get('/movie/{movie}', 'MoviesController@index');
+	Route::get('/movie/{movie}', 'MoviesController@show');
 	//show booking movie page
 	Route::get('/movie/{movie}/book', 'MoviesController@showBookingForm');
 	//show cart
@@ -44,7 +44,9 @@ Route::group(['middleware' => ['web']], function() {
 	Route::get('/receipt', 'CartsController@displayReceipt');
 
 	//user
-	Route::get('/account', '');
+	Route::get('/account', 'UsersController@index');
+
+	Route::resource('/wishlist', 'WishlistsController');
 
 	Route::get('destroy/session', function() {
 		session()->flush();

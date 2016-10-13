@@ -17,7 +17,7 @@ class MoviesController extends Controller
 		$this->middleware('auth');
 	}
 
-	public function index(Movie $movie)
+	public function show(Movie $movie)
 	{
 		return view('pages.movies.index', compact('movie'));
 	}

@@ -21,4 +21,8 @@ class Movie extends Model
 	public function orders() {
 		return $this->hasMany('App\Order');
 	}
+
+	public function users() {
+		return $this->belongsToMany('App\User');
+	}
 }

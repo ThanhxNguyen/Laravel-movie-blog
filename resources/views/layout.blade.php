@@ -71,8 +71,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="" class="text-center"><b>{{ Auth::user()->name }}</b></a></li>
-                                    <li><a href="" class="text-center">My Account</a></li>
+                                    <li><a href="{{url('/account')}}" class="text-center"><b>{{ Auth::user()->name }}</b></a></li>
+                                    <li><a href="{{url('/account')}}" class="text-center">My Account</a></li>
                                     <li><a href="" class="text-center">Wish List</a></li>
                                     <li><a href="" class="text-center">Settings</a></li>
                                     <li><a href="{{ url('/logout') }}" class="text-center"><i class="fa fa-btn fa-sign-out"></i>&nbsp;Logout</a></li>
