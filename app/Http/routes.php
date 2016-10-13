@@ -12,9 +12,7 @@
 */
 
 Route::group(['middleware' => ['web']], function() {
-	Route::get('/', function () {
-		return view('pages.home');
-	});
+	Route::get('/', 'PagesController@home');
 
 	Route::get('/test', function() {
 		return 'this is a test';

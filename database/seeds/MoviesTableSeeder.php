@@ -65,6 +65,32 @@ class MoviesTableSeeder extends Seeder
 				'created_at' => new DateTime(),
 				'updated_at' => new DateTime()
 			],
+			[
+				'title' => 'Storks',
+				'description' => 'Storks have moved on from delivering babies to packages. But when an order for a baby appears, the best delivery stork must scramble to fix the error by delivering the baby.',
+				'date_showing' => 'Oct 10, 2016',
+				'run_time' => '1hr 34min',
+				'director' => 'Doug Sweetland',
+				'rate' => 'PG',
+				'genre' => 'Animation | Adventure | Comedy',
+				'poster' => 'storks.jpg',
+				'category_id' => 1,
+				'created_at' => new DateTime(),
+				'updated_at' => new DateTime()
+			],
+			[
+				'title' => 'Masterminds',
+				'description' => 'A guard at an armored car company in the Southern U.S. organizes one of the biggest bank heists in American history. Based on the October 1997 Loomis Fargo robbery.',
+				'date_showing' => 'Oct 13, 2016',
+				'run_time' => '1hr 35min',
+				'director' => 'Jared Hess',
+				'rate' => 'PG-13',
+				'genre' => 'Action | Crime | Comedy',
+				'poster' => 'masterminds.jpg',
+				'category_id' => 1,
+				'created_at' => new DateTime(),
+				'updated_at' => new DateTime()
+			],
 			//comming soon
 			[
 				'title' => 'Max Steel',
@@ -101,6 +127,45 @@ class MoviesTableSeeder extends Seeder
 				'rate' => 'PG-13',
 				'genre' => 'Drama | Romance',
 				'poster' => 'priceless.jpg',
+				'category_id' => 2,
+				'created_at' => new DateTime(),
+				'updated_at' => new DateTime()
+			],
+			[
+				'title' => 'Doctor Strange',
+				'description' => 'After top neurosurgeon Stephen Strange is injured in a car accident that ruins his career, he sets out on a journey of healing, where he encounters the Ancient One, who becomes Strange\'s mentor in the mystic arts.',
+				'date_showing' => 'Oct 26, 2016',
+				'run_time' => '1hr 45min',
+				'director' => 'Scott Derrickson',
+				'rate' => 'PG-13',
+				'genre' => 'Action | Adventure | Fantasy',
+				'poster' => 'doctor_strange.jpg',
+				'category_id' => 2,
+				'created_at' => new DateTime(),
+				'updated_at' => new DateTime()
+			],
+			[
+				'title' => 'Moana',
+				'description' => 'A young woman uses her navigational talents to set sail for a fabled island. Joining her on the adventure is her hero, the legendary demi-god Maui.',
+				'date_showing' => 'Dec 26, 2016',
+				'run_time' => '1hr 45min',
+				'director' => 'Ron Clements',
+				'rate' => 'PG',
+				'genre' => 'Comedy | Adventure | Animation',
+				'poster' => 'moana.jpg',
+				'category_id' => 2,
+				'created_at' => new DateTime(),
+				'updated_at' => new DateTime()
+			],
+			[
+				'title' => 'Rogue One: A Star Wars Story',
+				'description' => 'The Rebellion makes a risky move to steal the plans to the Death Star, setting up the epic saga to follow.',
+				'date_showing' => 'Dec 15, 2016',
+				'run_time' => '1hr 45min',
+				'director' => 'Gareth Edwards',
+				'rate' => 'PG-13',
+				'genre' => 'Action | Adventure | Sci-Fi',
+				'poster' => 'star_wars_rogue_one.jpg',
 				'category_id' => 2,
 				'created_at' => new DateTime(),
 				'updated_at' => new DateTime()
