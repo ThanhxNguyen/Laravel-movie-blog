@@ -33,7 +33,7 @@
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">About Us</a></li>
