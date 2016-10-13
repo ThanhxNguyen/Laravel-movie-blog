@@ -62,12 +62,16 @@
                     @for($i=0; $i<count($showingMovies); $i++)
                         @if($i===0)
                             <div class="item active">
-                                <img src="images/carousel/{{$showingMovies[$i]['poster']}}" alt="POSTER" class="img-responsive center-block" style="width: 1140px !important;height: 450px !important;">
+                                <a href="{{url('/movie/'.$showingMovies[$i]['id'])}}">
+                                    <img src="images/carousel/{{$showingMovies[$i]['poster']}}" alt="POSTER" class="img-responsive center-block" style="width: 1140px !important;height: 450px !important;">
+                                </a>
                                 <div class="carousel-caption">{{$showingMovies[$i]['title']}}</div>
                             </div>
                         @else
                             <div class="item">
-                                <img src="images/carousel/{{$showingMovies[$i]['poster']}}" alt="POSTER" class="img-responsive center-block" style="width: 1140px !important;height: 450px !important;">
+                                <a href="{{url('/movie/'.$showingMovies[$i]['id'])}}">
+                                    <img src="images/carousel/{{$showingMovies[$i]['poster']}}" alt="POSTER" class="img-responsive center-block" style="width: 1140px !important;height: 450px !important;">
+                                </a>
                                 <div class="carousel-caption">{{$showingMovies[$i]['title']}}</div>
                             </div>
                         @endif
@@ -192,7 +196,7 @@
         <br/><br/>
         <div class="container">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: #3e3f3a">
+                <div class="panel-heading dark-bg">
                     <div class="btn-group btn-group-raised">
                         <button class="btn btn-warning col-sm-6" id="nowShowingBtn">Now Showing</button>
                         <button class="btn btn-warning col-sm-6" id="commingSoonBtn">Comming Soon</button>
@@ -226,8 +230,12 @@
                                     <div class="panel-body">
                                         <img src="images/gallery/{{$movie['poster']}}" class="img-responsive1 center-block" alt="POST" height="400" style="width: 100% !important;"/>
                                         <div class="btn-group btn-group-raised center-block">
-                                            <a class="btn btn-warning btn-raised col-md-6">Wish List</a>
-                                            <a class="btn btn-info btn-raised col-md-6" href="{{url('/movie/'.$movie['id'].'/book')}}">Book Ticket</a>
+                                            <a class="btn btn-warning btn-raised col-md-6" href="{{url('/movie/'.$movie['id'].'/book')}}">View</a>
+                                            <form action="{{url('/wishlist')}}" method="POST">
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="movie_id" value="{{$movie['id']}}"/>
+                                                <input type="submit" class="btn btn-info btn-raised col-md-6" value="Wish List">
+                                            </form>
                                         </div>
                                         <br><br>
                                         <h4>{{$movie['title']}}</h4>

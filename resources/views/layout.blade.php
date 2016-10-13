@@ -33,20 +33,21 @@
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="#">Link</a></li>
+                <li class="{{set_active('/')}}"><a href="{{ url('/') }}">Home</a></li>
+                <li class="{{set_active('wishlist')}}"><a href="{{url('/wishlist')}}">Wish List</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">About Us</a></li>
 
                 @yield('navlink')
 
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control col-md-8" placeholder="Search">
-                </div>
-            </form>
+            {{--<form class="navbar-form navbar-left">--}}
+                {{--<div class="form-group">--}}
+                    {{--<input type="text" class="form-control col-md-8" placeholder="Search">--}}
+                {{--</div>--}}
+            {{--</form>--}}
             <ul class="nav navbar-nav navbar-right">
+                <li class="{{set_active('search')}}"><a href="{{url('/search')}}"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
                 <li class="dropdown">
                     {{--<a href="#" data-target="dropdown-menu" class="dropdown-toggle" data-toggle="dropdown">User--}}
                         {{--<b class="caret"></b></a>--}}

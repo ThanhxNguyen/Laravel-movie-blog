@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cinema;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -19,5 +20,27 @@ class PagesController extends Controller
 			'showingMovies' => $showMovies,
 			'commingSoonMovies' => $commingSoonMovies
 		]);
+	}
+
+	public function showSearchPage() {
+		$results = [];
+		return view('pages.search', compact('results'));
+	}
+
+	public function search(Request $request) {
+		$val = $request->searchVal;
+		$movieNameSearchResults = Movie::where('title', 'LIKE', '%'.$val.'%')->get();
+
+		$cinemaNameSearchResult = Cinema::Where('name', 'LIKE', '%'.$val.'%')->first();
+
+		$results = null;
+		if($cinemaNameSearchResult != null) {
+			$results = $movieNameSearchResults->merge($cinemaNameSearchResult->movies);
+		} else {
+			$results = $movieNameSearchResults;
+		}
+
+//		dd($cinemaNameSearchResult);
+		return view('pages.search', compact('results'));
 	}
 }

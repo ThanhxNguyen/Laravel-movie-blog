@@ -5,17 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
 
 class WishlistsController extends Controller
 {
+
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $wishlist = User::find($request->user()->id)->movies;
+
+		return view('pages.wishlist', compact('wishlist'));
     }
 
     /**
@@ -36,7 +45,15 @@ class WishlistsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$movieId = $request->movie_id;
+		$userId = $request->user()->id;
+
+		$user = User::find($userId);
+		$user->movies()->attach($movieId);
+
+		$wishlist = $user->movies;
+
+		return view('pages.wishlist', compact('wishlist'));
     }
 
     /**
@@ -79,8 +96,13 @@ class WishlistsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $user = User::find($request->user()->id);
+		$user->movies()->detach($id);
+
+		$wishlist = $user->movies;
+
+		return view('pages.wishlist', compact('wishlist'));
     }
 }

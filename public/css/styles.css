@@ -53,3 +53,11 @@ a, a:focus, a:hover {
     color: #ff0033 !important;
     font-style: italic;
 }
+
+.dark-bg {
+    background-color: #3e3f3a !important;
+}
+
+.white-text {
+    color: #FFFFFF;
+}

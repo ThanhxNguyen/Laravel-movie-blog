@@ -14,9 +14,10 @@
 Route::group(['middleware' => ['web']], function() {
 	Route::get('/', 'PagesController@home');
 
-	Route::get('/test', function() {
-		return 'this is a test';
-	});
+	Route::get('/search', 'PagesController@showSearchPage');
+
+	//handle search
+	Route::post('/search', 'PagesController@search');
 
 	//pre-define route for authentication bone by laravel when use make:auth
 	Route::auth();
