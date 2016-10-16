@@ -25,3 +25,24 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+# References
+
+### Front-end
+* [Boostrap framework](https://getbootstrap.com/)
+* [Bootstrap Material Design Theme](http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html)
+* [Jquery](https://jquery.com/)
+* [Font Awesome Icons](http://fontawesome.io/)
+
+### Back-end
+* [Laravel 5.2](https://laravel.com/)
+
+### Resources
+
+#### Movies Look up
+* [IMDB](http://www.imdb.com/)
+* [TheMovieDB api - free movies database online](https://www.themoviedb.org/)
+
+#### Learning resources
+* [Laracasts - Laravel online video tutorials](https://laracasts.com/)
+* [Laravel Documentation](https://laravel.com/docs/5.3)
