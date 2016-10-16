@@ -32,7 +32,7 @@
                                         <div class="col-sm-6">
                                             <p><b>Price(ea): </b>${{number_format(App\TicketType::find($summary->ticket_type_id)->price, 2)}}</p>
                                             <p><b>Quantity: </b>{{$summary->quantity}}</p>
-                                            <p><b>Total Paid: </b>{{number_format( (App\TicketType::find($summary->ticket_type_id)->price) * $summary->quantity , 2)}}</p>
+                                            <p><b>Total Paid: </b>${{number_format( (App\TicketType::find($summary->ticket_type_id)->price) * $summary->quantity , 2)}}</p>
                                             <p><b>Purchased At: </b>{{$order->created_at->diffForHumans()}}</p>
                                         </div>
                                     </div>
