@@ -49,7 +49,11 @@ class WishlistsController extends Controller
 		$userId = $request->user()->id;
 
 		$user = User::find($userId);
-		$user->movies()->attach($movieId);
+//		if(!$user->movies->contains($movieId)) {
+//			$user->movies()->attach($movieId);
+//		}
+
+		$user->movies()->syncWithoutDetaching([$movieId]);
 
 		$wishlist = $user->movies;
 

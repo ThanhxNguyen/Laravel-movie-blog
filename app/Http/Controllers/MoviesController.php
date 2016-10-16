@@ -14,7 +14,7 @@ class MoviesController extends Controller
 {
 	public function __construct()
 	{
-		$this->middleware('auth');
+		$this->middleware('auth', ['only' => ['showBookingForm'] ]);
 	}
 
 	public function show(Movie $movie)

@@ -16,11 +16,14 @@
                     <div>
                         <div class="col-md-6">
                             <div class="panel panel-default">
-                                <div class="panel-heading text-center"><b>Movie Info</b></div>
+                                <div class="panel-heading text-center"><b>Movie Information</b></div>
                                 <div class="panel-body">
                                     <p><b>Title: </b>{{ $movie->title }}</p>
+                                    <p class="text-muted">{{ $movie->genre }}</p>
                                     <p><b>Showing: </b>{{ $movie->date_showing }}</p>
                                     <p><b>Run Time: </b>{{ $movie->run_time }}</p>
+                                    <hr/>
+                                    <p>{{ $movie->description }}</p>
                                 </div>
                             </div><!--end panel-->
                         </div>

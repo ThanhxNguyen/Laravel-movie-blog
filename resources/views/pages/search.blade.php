@@ -28,7 +28,7 @@
                 <div class="panel-heading"><h3 class="text-center">Search Results</h3></div>
                 <div class="panel-body">
                     @if(count($results) === 0)
-                        <p class="text-center"><i>No Content Available!</i></p>
+                        <p class="text-center"><i>No Search Results!</i></p>
                     @else
                         @foreach($results as $k=>$movie)
                             <div class="col-md-4">

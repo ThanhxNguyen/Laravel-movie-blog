@@ -19,7 +19,7 @@
                 {{--</div>--}}
                 <div class="panel-body">
                     @if(count($wishlist) === 0)
-                        <h4 class="text-center">No content available!</h4>
+                        <h4 class="text-center">You have no movie in your wish list at the moment!</h4>
                     @else
                         {{--{{var_dump($wishlist)}}--}}
                         @foreach($wishlist as $k=>$movie)

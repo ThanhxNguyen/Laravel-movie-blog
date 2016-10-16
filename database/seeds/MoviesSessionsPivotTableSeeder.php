@@ -23,5 +23,11 @@ class MoviesSessionsPivotTableSeeder extends Seeder
 
 		$movie4 = Movie::find(4);
 		$movie4->sessions()->sync([2, 4, 6, 7]);
+
+		$movie5 = Movie::find(5);
+		$movie5->sessions()->sync([1, 4, 5, 7]);
+
+		$movie6 = Movie::find(6);
+		$movie6->sessions()->sync([2, 5, 6, 7]);
     }
 }

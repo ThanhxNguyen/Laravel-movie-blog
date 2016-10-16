@@ -47,9 +47,9 @@ Route::group(['middleware' => ['web']], function() {
 
 	Route::resource('/wishlist', 'WishlistsController');
 
-	Route::get('destroy/session', function() {
-		session()->flush();
-	});
+	//facebook login
+	Route::get('/facebook/login', 'Auth\AuthController@redirectToProvider');
+	Route::get('/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 });
 
 

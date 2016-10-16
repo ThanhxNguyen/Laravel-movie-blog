@@ -29,6 +29,6 @@ class CreateMovieUserTable extends Migration
      */
     public function down()
     {
-        Schema::drop('movie-user');
+        Schema::drop('movie_user');
     }
 }

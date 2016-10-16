@@ -4,14 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Summary extends Model
 {
-    protected $fillable = ['user_id', 'movie_id', 'cinema_id', 'session_id', 'ticket_type_id'];
-
-	public function user()
-	{
-		return $this->belongsTo('App\User');
-	}
+    protected $fillable = ['quantity', 'movie_id', 'cinema_id', 'session_id', 'ticket_type_id', 'order_id'];
 
 	public function movie()
 	{
@@ -31,5 +26,9 @@ class Order extends Model
 	public function tickettype()
 	{
 		return $this->belongsTo('App\TicketType');
+	}
+
+	public function order() {
+		return $this->belongsTo('App\Order');
 	}
 }

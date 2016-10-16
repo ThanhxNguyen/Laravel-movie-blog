@@ -34,9 +34,9 @@
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
                 <li class="{{set_active('/')}}"><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="javascript:void(0)">News</a></li>
                 <li class="{{set_active('wishlist')}}"><a href="{{url('/wishlist')}}">Wish List</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="javascript:void(0)">About Us</a></li>
 
                 @yield('navlink')
 
@@ -47,7 +47,12 @@
                 {{--</div>--}}
             {{--</form>--}}
             <ul class="nav navbar-nav navbar-right">
-                <li class="{{set_active('search')}}"><a href="{{url('/search')}}"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
+                <li class="{{set_active('search')}}"><a href="{{url('/search')}}"><i class="fa fa-search fa-lg"></i></a></li>
+                @if(!Auth::guest())
+                    <li class="{{set_active('cart')}}">
+                        <a href="{{url('/cart')}}"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;&nbsp;<span class="badge">{{(session()->has('cart')) ? count(session('cart')) : 0}}</span></a>
+                    </li>
+                @endif
                 <li class="dropdown">
                     {{--<a href="#" data-target="dropdown-menu" class="dropdown-toggle" data-toggle="dropdown">User--}}
                         {{--<b class="caret"></b></a>--}}
@@ -74,8 +79,8 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{url('/account')}}" class="text-center"><b>{{ Auth::user()->name }}</b></a></li>
                                     <li><a href="{{url('/account')}}" class="text-center">My Account</a></li>
-                                    <li><a href="" class="text-center">Wish List</a></li>
-                                    <li><a href="" class="text-center">Settings</a></li>
+                                    <li><a href="{{url('/wishlist')}}" class="text-center">Wish List</a></li>
+                                    <li><a href="javascript:void(0)" class="text-center">Settings</a></li>
                                     <li><a href="{{ url('/logout') }}" class="text-center"><i class="fa fa-btn fa-sign-out"></i>&nbsp;Logout</a></li>
                                 </ul>
                             </li>
@@ -102,9 +107,15 @@
         <div class="row">
             <div class="col-xs-4 text-center">
                 <br/>
-                <a href="#">About Us</a>
+                <a href="{{url('/')}}">Home</a>
+                <br/>
+                <a href="{{url('/')}}">Movies</a>
+                <br/>
+                <a href="{{url('/wishlist')}}">Wish list</a>
             </div>
             <div class="col-xs-4 text-center">
+                <br/>
+                <a href="#">About Us</a>
                 <br/>
                 <a href="#">Contact Us</a>
                 <br/>

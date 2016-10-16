@@ -23,5 +23,11 @@ class CinemasMoviesPivotTableSeeder extends Seeder
 
 		$movie4 = Movie::find(4);
 		$movie4->cinemas()->sync([2, 4]);
+
+		$movie5 = Movie::find(5);
+		$movie5->cinemas()->sync([3, 4]);
+
+		$movie6 = Movie::find(6);
+		$movie6->cinemas()->sync([1, 4]);
     }
 }
