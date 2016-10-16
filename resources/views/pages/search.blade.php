@@ -34,7 +34,9 @@
                             <div class="col-md-4">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
-                                        <img src="{{url('images/gallery/'.$movie['poster'])}}" class="img-responsive1 center-block" alt="POST" height="400" style="width: 100% !important;"/>
+                                        <a href="{{url('/movie/'.$movie['id'])}}">
+                                            <img src="{{url('images/gallery/'.$movie['poster'])}}" class="img-responsive1 center-block" alt="POST" height="400" style="width: 100% !important;"/>
+                                        </a>
                                         <div class="btn-group btn-group-raised center-block">
                                             <a class="btn btn-warning btn-raised col-md-6" href="{{url('/movie/'.$movie['id'])}}">View</a>
                                             <a class="btn btn-info btn-raised col-md-6" href="{{url('/movie/'.$movie['id']).'/book'}}">Book Ticket</a>
